@@ -10,4 +10,9 @@ return {
     keys = {
     { '<leader>n', ':Neotree reveal toggle<CR>' },
   },
+  config = function ()
+	  require("neo-tree").setup({
+	  	close_if_last_window = true,
+	  })
+  end,
 }
