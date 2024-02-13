@@ -3,7 +3,6 @@ return {
         tag = "0.1.5",
         dependencies = {
                 "nvim-lua/plenary.nvim",
-                "nvim-telescope/telescope-ui-select.nvim",
         },
         keys = {
                 {
@@ -31,11 +30,6 @@ return {
                 local telescope = require("telescope")
 
                 telescope.setup({
-                        extension = {
-                                ["ui-select"] = {
-                                        require("telescope.themes").get_dropdown,
-                                },
-                        },
                         defaults = {
                                 mappings = {
                                         i = {
@@ -52,6 +46,5 @@ return {
                                 },
                         },
                 })
-                telescope.load_extension("ui-select")
         end,
 }
