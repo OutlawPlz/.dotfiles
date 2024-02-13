@@ -15,6 +15,7 @@ return {
 
                 lsp.lua_ls.setup({})
                 lsp.intelephense.setup({})
+                lsp.volar.setup({})
 
                 vim.keymap.set("n", "<leader>lD", vim.lsp.buf.hover, {})
                 vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, {})
