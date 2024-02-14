@@ -17,3 +17,4 @@ vim.opt.sidescrolloff = 7
 vim.opt.clipboard = "unnamedplus" -- Use Linux system clipboard
 vim.opt.confirm = true -- ask for confirmation instead of erroring
 vim.opt.undofile = true -- persistent undo
+vim.opt.autowriteall = true

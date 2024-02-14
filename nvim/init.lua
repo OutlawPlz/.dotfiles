@@ -20,10 +20,15 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 
 vim.cmd([[
-	augroup FileTypeOverrides
+	augroup Terminal
 		autocmd!
 		autocmd TermOpen * setlocal nospell
 		autocmd TermOpen * setlocal nonumber
+	augroup END
+
+	augroup AutosaveBuffer
+		autocmd!
+		autocmd FocusLost,BufLeave *.* :up
 	augroup END
 ]])
 
