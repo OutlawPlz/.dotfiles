@@ -15,6 +15,7 @@ return {
 				"json",
 				"lua",
 				"php",
+				"phpdoc",
 				"regex",
 				"sql",
 				"typescript",
