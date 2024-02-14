@@ -19,4 +19,12 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
+vim.cmd([[
+	augroup FileTypeOverrides
+		autocmd!
+		autocmd TermOpen * setlocal nospell
+		autocmd TermOpen * setlocal nonumber
+	augroup END
+]])
+
 vim.cmd.colorscheme("catppuccin-macchiato")
