@@ -23,9 +23,20 @@ return {
 		-- Keymaps
 
 		vim.keymap.set("n", "gd", ":Telescope lsp_definitions<CR>", { desc = "Go to definition" })
-		vim.keymap.set("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Go to code actions" })
+		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code actions" })
 		vim.keymap.set("n", "gi", ":Telescope lsp_implementations<CR>", { desc = "Go to implementations" })
 		vim.keymap.set("n", "gr", ":Telescope lsp_references<CR>", { desc = "Go to references" })
+		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename occurrence" })
+		vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Lint and format code" })
+		vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, { desc = "Show documentation, [h]elp" })
+
+		vim.api.nvim_create_autocmd("CursorHold", {
+			pattern = "*.*",
+			callback = function()
+				vim.lsp.buf.hover({ focusable = false })
+			end,
+		})
+
 		-- vim.keymap.set("n", "<Leader>lr", ":LspRestart<CR>", { silent = true })
 		-- vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 		-- vim.keymap.set("n", "<Leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")

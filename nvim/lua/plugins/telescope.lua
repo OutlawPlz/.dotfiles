@@ -5,24 +5,8 @@ return {
 		"nvim-lua/plenary.nvim",
 	},
 	keys = {
-		{
-			"<leader><space>",
-			function()
-				require("telescope.builtin").find_files()
-			end,
-		},
-		{
-			"<leader>fF",
-			function()
-				require("telescope.builtin").find_files({ no_ignore = true, prompt_title = "All Files" })
-			end,
-		},
-		{
-			"<leader>fb",
-			function()
-				require("telescope.builtin").buffers()
-			end,
-		},
+		{ "<leader><space>", ":Telescope find_files<CR>", { desc = "Find files" } },
+		{ "<leader>b", ":Telescope buffers<CR>", { desc = "Find buffers" } },
 	},
 	config = function()
 		local actions = require("telescope.actions")
