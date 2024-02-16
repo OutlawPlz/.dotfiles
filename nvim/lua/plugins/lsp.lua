@@ -12,13 +12,14 @@ return {
 		})
 
 		local lsp = require("lspconfig")
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 		-- LSP
 
-		lsp.lua_ls.setup({})
-		lsp.intelephense.setup({})
-		lsp.volar.setup({})
-		lsp.tailwindcss.setup({})
+		lsp.lua_ls.setup({ capabilities = capabilities })
+		lsp.intelephense.setup({ capabilities = capabilities })
+		lsp.volar.setup({ capabilities = capabilities })
+		lsp.tailwindcss.setup({ capabilities = capabilities })
 
 		-- Keymaps
 
