@@ -31,14 +31,12 @@ return {
 		vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, { desc = "Show documentation from LSP" })
 		vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic" })
 
-		--[[
 		vim.api.nvim_create_autocmd("CursorHold", {
 			pattern = "*.*",
 			callback = function()
 				vim.lsp.buf.hover({ focusable = false })
 			end,
 		})
-		--]]
 
 		--vim.keymap.set("n", "<Leader>lr", ":LspRestart<CR>", { silent = true })
 		--vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>")

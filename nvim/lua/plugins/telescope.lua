@@ -5,9 +5,9 @@ return {
 		"nvim-lua/plenary.nvim",
 	},
 	keys = {
-		{ "<leader><space>", ":Telescope find_files<CR>", { desc = "Find files" } },
-		{ "<leader><tab>", ":Telescope buffers sort_lastused=true<CR>", { desc = "Find buffers" } },
-		{ "<leader>fg", ":Telescope live_grep<CR>", { desc = "Grep text" } },
+		{ "<leader><space>", ":Telescope find_files<CR>",                 { desc = "Find files" } },
+		{ "<leader><tab>",   ":Telescope buffers sort_lastused=true<CR>", { desc = "Find buffers" } },
+		{ "<leader>fg",      ":Telescope live_grep<CR>",                  { desc = "Grep text" } },
 	},
 	config = function()
 		local actions = require("telescope.actions")
