@@ -5,12 +5,12 @@ return {
 		"nvim-lua/plenary.nvim",
 	},
 	keys = {
-		{ "<leader><space>", ":Telescope find_files<CR>",                                 { desc = "Find files" } },
-		{ "<leader><tab>",   ":Telescope buffers sort_lastused=true<CR>",                 { desc = "Find buffers" } },
-		{ "<leader>fa",      ":Telescope find_files no_ignore=true<CR>",                  { desc = "Find all files" } },
-		{ "<leader>fg",      ":Telescope live_grep<CR>",                                  { desc = "Grep text" } },
-		{ "<leader>fb",      ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { desc = "Browse files" } },
-		{ "<leader>fs",      ":Telescope lsp_document_symbols<CR>",                       { desc = "Find symbols" } },
+		{ "<leader><space>", ":Telescope find_files<CR>",                                 desc = "Find files" },
+		{ "<leader><tab>",   ":Telescope buffers sort_lastused=true<CR>",                 desc = "Find buffers" },
+		{ "<leader>fa",      ":Telescope find_files no_ignore=true<CR>",                  desc = "Find all files" },
+		{ "<leader>fg",      ":Telescope live_grep<CR>",                                  desc = "Grep text" },
+		{ "<leader>fb",      ":Telescope file_browser path=%:p:h select_buffer=true<CR>", desc = "Browse files" },
+		{ "<leader>fs",      ":Telescope lsp_document_symbols<CR>",                       desc = "Find symbols" },
 	},
 	config = function()
 		local actions = require("telescope.actions")
